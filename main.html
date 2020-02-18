@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twig.js templating test</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css?1582015289135">
+</head>
+<body>
+
+
+<header class="header">
+
+</header>
+
+    <section class="list-block">
+        <div class="container">
+            <div class="list-block__inner">
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-element">
+                    <div class="list-element__picture">
+                        <picture>
+                            <source srcset="images/list-img.jpg" media="(min-width: 600px)">
+                            <img src="images/list-img.jpg" alt="list-img">
+                        </picture>
+                    </div>
+                    <div class="list-element__inner">
+                        <div class="list-element__btns">
+                            <button class="list-element__btn">Winter Life Ski Resort</button>
+                            <button class="list-element__like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 15" width="18" height="15"><defs><image width="18" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPBAMAAAAbqIIhAAAAAXNSR0IB2cksfwAAACpQTFRFAAAArtjymNDu8PD/4fD4eMLsY7nqg8btj8vvbL3rzun0o9TwWLTpudzzC5v/kQAAAA50Uk5TAHeZESLM7ruq3USI/2ZXVY2YAAAAdElEQVR4nGNgYFQSZjBUEmBgYAmryFw1rT3VgYFpCoNFWjODpwKDGVB8NwMDYzKDzwUGEOA9AhZjAIsxBYBZrAoMLBlgVpsDA8OyBiCDIwtIcIEE2xaAJFY2QISAtsxg6HQAsxg8O6ZAGAwsM6FCDAwuIAIA3yAUvDPdl1AAAAAASUVORK5CYII="/></defs><style>tspan { white-space:pre }</style><use  href="#img1" x="0" y="0" /></svg></button>
+                        </div>
+                        <div class="list-element__info">
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--first"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14" width="9" height="14"><defs><image width="9" height="14" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAOBAMAAAAPuiubAAAAAXNSR0IB2cksfwAAACpQTFRFAAAA8P//6fj/hsjvY7nqWLTpbr7tst30p9j00uz4vOH1m9LykM7w3PD6CGkR4gAAAA50Uk5TABEiu+7/3XeIRGaZqjPHTWegAAAATElEQVR4nGNgYFRgYGBgMgkrYGBQCw0NZ2BozdQIEWBILWBIXQAlISIqoaHRDAzcoaFOQPWuoRuA2o6GXgCSU4OBBAOPL4hkEGBgAAC2tA+UN2rgtwAAAABJRU5ErkJggg=="/></defs><style>tspan { white-space:pre }</style><use  href="#img2" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Location:</div>
+                                <div class="info-block__text">72 Lorem Rd, CO 30568, USA</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--second"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="13"><defs><image width="14" height="13" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANBAMAAABr8kJMAAAAAXNSR0IB2cksfwAAAC1QTFRFAAAAm9Ly3PD60uz4WLTphsjvxuf5p9j0br7tY7nqst306fj/vOH18P//kM7wAa36iAAAAA90Uk5TAJkzRP+7VYjd7nciZhGqv8MGTwAAAFBJREFUeJxjYGBgEGIAA2ZXCM3qYgCmTVwCgGS6xBQXj8DVDEtcQKCbgQtEeWxgAAt0AxVwAOkDQPomkC4Aa5sC1nhk1uWQBiC96gID81sGAE5JFX8CJ6lYAAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img3" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Rating:</div>
+                                <div class="info-block__text">4 Stars</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-block__svg info-block__svg--third"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" width="9" height="16"><defs><image width="9" height="16" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQBAMAAAA2ZkhwAAAAAXNSR0IB2cksfwAAADBQTFRFAAAA8P//6fj/m9LyWLTphsjvst30vOH1Y7nqkM7wbr7t0uz43PD6p9j0xuf5ecPtzb8xNQAAABB0Uk5TABEimf+7d2buqt1EM4hVzAPp0LcAAABSSURBVHicY2BgVGAAAmYnEKnqBuSwt7i0MTBoeGa6MTCULGDYwMBwxFcAKMnm0nkASG116QYpPekFVKnA4yHA8KQ53xWo1cVlEUjWTQBuGshkAO0BD9xPcIW0AAAAAElFTkSuQmCC"/></defs><style>tspan { white-space:pre }</style><use  href="#img4" x="0" y="0" /></svg>
+</div>
+                                <div class="info-block__info">Price:</div>
+                                <div class="info-block__text">From <span>$300</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+
+</footer>
+
+<script src="js/vendor.js?1582015289135"></script>
+<script src="js/index.js?1582015289135"></script>
+</body>
+</html>
